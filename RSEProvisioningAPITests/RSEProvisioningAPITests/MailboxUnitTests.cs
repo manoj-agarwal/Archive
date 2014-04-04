@@ -35,8 +35,8 @@ namespace RseProvisioningApiTests
         [Test]
         public void CanReadMailbox()
         {
-            var mailbox = HttpClient.GetObjectAsync<Mailbox>("/v1/mailboxes/user@example.com").Result;
-            mailbox.Email = "user@example.com";
+            var mailbox = HttpClient.GetObjectAsync<Mailbox>("/v1/mailboxes/user1@example1.com").Result;
+            mailbox.Email = "user1@example1.com";
 
             Assert.AreEqual(createdMailbox, mailbox);
         }
@@ -47,10 +47,10 @@ namespace RseProvisioningApiTests
             throw new NotImplementedException();
         }
 
-        [Test]
-        public void CanDeleteMailbox()
+        [TearDown]
+        public void Dispose()
         {
-            throw new NotImplementedException();
+            HttpClient.DeleteObjectAsync("/v1/mailboxes/user1@example1.com").Wait();
         }
     }
 }
