@@ -44,7 +44,9 @@ namespace RseProvisioningApiTests
         [Test]
         public void CanUpdateMailbox()
         {
-            throw new NotImplementedException();
+            createdMailbox.VacationMessage = "I am on vacation, please do not disturb.";
+
+            HttpClient.PatchAsync<Mailbox>("/v1/mailboxes/user1@example1.com", createdMailbox);
         }
 
         [TearDown]
