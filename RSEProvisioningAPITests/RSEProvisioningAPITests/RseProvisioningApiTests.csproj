@@ -42,6 +42,10 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Rackspace.HttpClient.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=711b951639d41e15, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Rackspace.HttpClient.Extensions.1.0.0.184\lib\net45\Rackspace.HttpClient.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Net.Http" />
@@ -83,12 +87,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Apps-Control-Panel-Framework\Rackspace.HttpClient.Extensions\Rackspace.HttpClient.Extensions.csproj">
-      <Project>{b3011273-b669-4d6b-9699-82c021465f3e}</Project>
-      <Name>Rackspace.HttpClient.Extensions</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
